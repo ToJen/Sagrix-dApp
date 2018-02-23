@@ -11,7 +11,7 @@ export default class Landing extends Component {
     render() {
         return (
           <View style={styles.wrapper}>
-          <Image source={logo} style={{ alignItems:'center', justifyContent:'center', alignSelf:'center', width: 300, height: 100 }}></Image>
+          <Image source={logo} style={{ alignItems:'center', justifyContent:'center', alignSelf:'center', width: 400, height: 200 }}></Image>
             <View style={styles.inputWrap}>
               <View style={styles.iconWrap}>
                 <Image
@@ -65,7 +65,8 @@ const styles = StyleSheet.create({
     marginVertical: 20,
     height: 40,
     width: 300,
-    backgroundColor: "transparent"
+    backgroundColor: "transparent",
+    alignSelf:'center'
   },
   input: {
     flex: 1,
@@ -88,8 +89,9 @@ const styles = StyleSheet.create({
     marginVertical: 15,
     alignItems: "center",
     width: 150,
-    marginLeft: 70,
-    justifyContent: "center"
+    marginLeft: 120,
+    justifyContent: "center",
+
   },
   buttonText: {
     color: "#FFF",
