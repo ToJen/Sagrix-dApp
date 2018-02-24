@@ -1,10 +1,8 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { AppRegistry, StyleSheet, Text, View } from 'react-native';
 import {StackNavigator} from 'react-navigation';
-import LoginScreen from './src/screens/Login';
-import SignupScreen from './src/screens/Signup';
-import DashboardScreen from './src/screens/Dashboard';
-import ForgotPasswordScreen from './src/screens/ForgotPassword';
+import loginScreen from './src/screens/loginScreen';
+import signUpScreen from './src/screens/signUpScreen';
 
 export default class App extends React.Component {
   render() {
@@ -13,25 +11,18 @@ export default class App extends React.Component {
     );
   }
 }
+const AppNavigator = StackNavigator({
+  loginScreen: { screen : loginScreen},
+  signUpScreen: { screen : signUpScreen}
+});
 
-const AppNavigator = StackNavigator(
-  {
-    LoginScreen: { screen : LoginScreen},
-    SignupScreen: { screen : SignupScreen},
-    DashboardScreen: { screen : DashboardScreen},
-    ForgotPasswordScreen: { screen : ForgotPasswordScreen}
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#043233',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
-  { 
-    initialRouteName: 'LoginScreen',
-    headerMode: 'none'
-  }
-);
+});
 
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     backgroundColor: '#043233',
-//     alignItems: 'center',
-//     justifyContent: 'center',
-//   },
-// });
+//AppRegistry.registerComponent('App', () => App);
