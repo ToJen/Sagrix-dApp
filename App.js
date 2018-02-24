@@ -1,17 +1,20 @@
 import React from 'react';
 import { AppRegistry, StyleSheet, Text, View } from 'react-native';
-
-import Landing from './src/components/Landing';
+import {StackNavigator} from 'react-navigation';
+import loginScreen from './src/screens/loginScreen';
+import signUpScreen from './src/screens/signUpScreen';
 
 export default class App extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Landing/>
-      </View>
+      <AppNavigator />
     );
   }
 }
+const AppNavigator = StackNavigator({
+  loginScreen: { screen : loginScreen},
+  signUpScreen: { screen : signUpScreen}
+});
 
 const styles = StyleSheet.create({
   container: {

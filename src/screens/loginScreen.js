@@ -6,12 +6,15 @@ import logo from '../images/logo.png';
 const lockIcon = require("../images/lock.png");
 const personIcon = require("../images/person.png");
 
-export default class Landing extends Component {
-
+class loginScreen extends Component {
     render() {
         return (
+          <View style={styles.container}>
           <View style={styles.wrapper}>
           <Image source={logo} style={{ alignItems:'center', justifyContent:'center', alignSelf:'center', width: 400, height: 200 }}></Image>
+          <View>
+            <Text style={styles.motto}>Healthcare Planning the Smart Way</Text>
+          </View>
             <View style={styles.inputWrap}>
               <View style={styles.iconWrap}>
                 <Image
@@ -51,12 +54,34 @@ export default class Landing extends Component {
                 <Text style={styles.forgotPasswordText}>Forgot Password?</Text>
               </View>
             </TouchableOpacity>
+            <View>
+              <Text style={styles.forgotPasswordText}>New to Sagrix?</Text>
+            </View>
+            <TouchableOpacity activeOpacity={.5}>
+              <View style={styles.button}>
+                <Text onPress={()=>
+                this.props.navigation.navigate('signUpScreen')} style={styles.buttonText}>Sign Up</Text>
+              </View>
+            </TouchableOpacity>
+          </View>
           </View>
         )
     }
 }
 const styles = StyleSheet.create({
-
+  container: {
+    flex: 1,
+    backgroundColor: '#043233',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  motto: {
+    color: "#FFF",
+    backgroundColor: "transparent",
+    textAlign: "center",
+    fontWeight: 'bold',
+    fontSize: 20,
+  },
   wrapper: {
     paddingHorizontal: 25,
   },
@@ -103,3 +128,5 @@ const styles = StyleSheet.create({
     textAlign: "center"
   }
 });
+
+export default loginScreen;
