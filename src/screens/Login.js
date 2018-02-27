@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, TextInput, Image, Text, Button, 
+import { View, TextInput, Image, Text, Button,
         StyleSheet, TouchableOpacity, Animated, Keyboard, KeyboardAvoidingView } from 'react-native';
 import logo from '../images/logo.png';
 
@@ -69,25 +69,25 @@ export default class LoginScreen extends Component {
         <View>
           <Animated.Image source={logo} style={[styles.logo, {height: this.imageHeight}]} />
           <Text style={styles.motto}>Healthcare Planning the Smart Way</Text>
-          <IconTextInput 
+          <IconTextInput
             icon={lockIcon}
             placeholder="Username"
           />
-          <IconTextInput 
+          <IconTextInput
             icon={personIcon}
             placeholder="Password"
           />
           <TouchableOpacity activeOpacity={.5}>
             <View style={styles.button}>
-              <Text 
+              <Text
                 style={styles.buttonText}
-                onPress={ ()=> this.props.navigation.navigate('DashboardScreen') }
+                onPress={ ()=> this.props.navigation.navigate('drawerStack') }
               >Sign In</Text>
             </View>
           </TouchableOpacity>
           <TouchableOpacity activeOpacity={.5}>
             <View>
-              <Text 
+              <Text
                 style={styles.forgotPasswordText}
                 onPress={ ()=> this.props.navigation.navigate('ForgotPasswordScreen') }
               >Forgot Password?</Text>
@@ -97,7 +97,7 @@ export default class LoginScreen extends Component {
             <View style={styles.button}>
               <Text
                 onPress={ ()=> this.props.navigation.navigate('SignupScreen') }
-                style={styles.buttonText} 
+                style={styles.buttonText}
               >Sign Up</Text>
             </View>
           </TouchableOpacity>
