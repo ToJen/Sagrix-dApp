@@ -11,9 +11,24 @@ import CircleOfCareScreen from './src/screens/CircleOfCare';
 
 
 const DrawerStack = DrawerNavigator({
-  Dashboard: { screen : DashboardScreen},
-  MyAHD: { screen : MyAHDScreen},
-  CircleOfCare: { screen : CircleOfCareScreen},
+  Dashboard: {
+    screen : DashboardScreen, 
+    navigationOptions: {
+      drawerIcon: () => (<Icon name="home" size={20} color="#043233" />)
+    }
+  },
+  MyAHD: { 
+    screen : MyAHDScreen, 
+    navigationOptions: {
+      drawerIcon: () => (<Icon name="file-text-o" size={20} color="#043233" />)
+    }
+  },
+  CircleOfCare: { 
+    screen : CircleOfCareScreen, 
+    navigationOptions: {
+      drawerIcon: () => (<Icon name="group" size={20} color="#043233" />)
+    }
+  }
 })
 
 const DrawerNavigation = StackNavigator(
@@ -25,8 +40,18 @@ const DrawerNavigation = StackNavigator(
     navigationOptions: ({navigation}) => ({
       headerStyle: {backgroundColor: '#043233'},
       title: 'Dashboard!',
-      headerLeft: <Icon name="navicon" size={30} color="#e7ff6e" style={{padding: 5}} onPress={() => navigation.navigate('DrawerOpen')}></Icon>
-  })
+      headerLeft: <Icon name="navicon" size={30} 
+                        color="#e7ff6e" style={{padding: 5}} 
+                        onPress={() => {
+                                  if (navigation.state.index === 0) {
+                                    navigation.navigate('DrawerOpen')
+                                  } else {
+                                    navigation.navigate('DrawerClose')
+                                  }
+                                }} 
+                  />
+    
+    }),
   }
 );
 
