@@ -144,14 +144,14 @@ const styles = StyleSheet.create({
     paddingHorizontal: 17,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#605E5E"
+    backgroundColor: "#748037"
   },
   icon: {
     width: 20,
     height: 20,
   },
   button: {
-    backgroundColor: "#605E5E",
+    backgroundColor: "#748037",
     paddingVertical: 15,
     marginVertical: 15,
     alignItems: "center",
