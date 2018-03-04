@@ -24,6 +24,8 @@
     "react": "^16.2.0",
     "react-native": "0.52.0",
     "react-native-checkbox": "^2.0.0",
-    "react-navigation": "^1.1.2"
+    "react-native-checkbox-form": "^1.1.0",
+    "react-navigation": "^1.1.2",
+    "react-redux": "^5.0.7"
   }
 }

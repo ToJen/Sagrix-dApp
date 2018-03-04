@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import {StackNavigator, DrawerNavigator} from 'react-navigation';
+import {StackNavigator, DrawerNavigator, DrawerItems} from 'react-navigation';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import LoginScreen from './src/screens/Login';
 import SignupScreen from './src/screens/Signup';
@@ -12,23 +12,24 @@ import CircleOfCareScreen from './src/screens/CircleOfCare';
 
 const DrawerStack = DrawerNavigator({
   Dashboard: {
-    screen : DashboardScreen, 
+    screen : DashboardScreen,
     navigationOptions: {
       drawerIcon: () => (<Icon name="home" size={20} color="#043233" />)
     }
   },
-  MyAHD: { 
-    screen : MyAHDScreen, 
+  MyAHD: {
+    screen : MyAHDScreen,
     navigationOptions: {
       drawerIcon: () => (<Icon name="file-text-o" size={20} color="#043233" />)
     }
   },
-  CircleOfCare: { 
-    screen : CircleOfCareScreen, 
+  CircleOfCare: {
+    screen : CircleOfCareScreen,
     navigationOptions: {
       drawerIcon: () => (<Icon name="group" size={20} color="#043233" />)
     }
-  }
+  },
+
 })
 
 const DrawerNavigation = StackNavigator(
@@ -40,17 +41,17 @@ const DrawerNavigation = StackNavigator(
     navigationOptions: ({navigation}) => ({
       headerStyle: {backgroundColor: '#043233'},
       title: 'Dashboard!',
-      headerLeft: <Icon name="navicon" size={30} 
-                        color="#e7ff6e" style={{padding: 5}} 
+      headerLeft: <Icon name="navicon" size={30}
+                        color="#e7ff6e" style={{padding: 5}}
                         onPress={() => {
                                   if (navigation.state.index === 0) {
                                     navigation.navigate('DrawerOpen')
                                   } else {
                                     navigation.navigate('DrawerClose')
                                   }
-                                }} 
+                                }}
                   />
-    
+
     }),
   }
 );
