@@ -11,9 +11,9 @@ export default class MyAHDScreen extends Component {
 	render() {
 		const ahdQuestions = [
                         {label: 'Medical treatment for the primary purposes of research', value: 'one'},
-                        {label: 'Sterilization that is not medically necessary for the protection of my health', value: 'two'},
-                        {label: 'The removal of tissue from my body while I am living for transplantation to another person', value: 'three'},
-                        {label: 'The removal of tissue from my body while I am living for the purpose of medical education or medical research', value: 'four'}
+                        {label: 'Sterilization that is not medically necessary for the \nprotection of my health', value: 'two'},
+                        {label: 'The removal of tissue from my body while I am living for \ntransplantation to another person', value: 'three'},
+                        {label: 'The removal of tissue from my body while I am living for \nthe purpose of medical education or medical research ', value: 'four'}
                       ];
 
 		return(
@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
     padding: 20
   },
   questionStyle: {
-		
+
     flex: 0,
     flexWrap: 'wrap'
 		//width: 350,
