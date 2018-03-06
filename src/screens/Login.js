@@ -78,12 +78,12 @@ export default class LoginScreen extends Component {
             placeholder="Password"
           />
           <TouchableOpacity activeOpacity={.5}>
-            <View style={styles.button}>
-              <Text
-                style={styles.buttonText}
-                onPress={ ()=> this.props.navigation.navigate('drawerStack') }
-              >Sign In</Text>
-            </View>
+            <TouchableOpacity
+             style={styles.button}
+             onPress={ ()=> this.props.navigation.navigate('drawerStack') }
+             >
+             <Text style={styles.buttonText}>Sign In</Text>
+             </TouchableOpacity>
           </TouchableOpacity>
           <TouchableOpacity activeOpacity={.5}>
             <View>
@@ -94,13 +94,14 @@ export default class LoginScreen extends Component {
             </View>
           </TouchableOpacity>
           <TouchableOpacity activeOpacity={.5}>
-            <View style={styles.button}>
-              <Text
-                onPress={ ()=> this.props.navigation.navigate('SignupScreen') }
-                style={styles.buttonText}
-              >Sign Up</Text>
-            </View>
-          </TouchableOpacity>
+            <TouchableOpacity
+               style={styles.button}
+               onPress={ ()=> this.props.navigation.navigate('SignupScreen') }
+               >
+               <Text style={styles.buttonText}>Sign Up</Text>
+             </TouchableOpacity>
+        </TouchableOpacity>
+          
         </View>
       </KeyboardAvoidingView>
     )

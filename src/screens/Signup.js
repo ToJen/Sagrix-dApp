@@ -44,12 +44,13 @@ export default class SignupScreen extends Component {
             />
 
             <TouchableOpacity activeOpacity={.5}>
-              <View style={styles.button}>
-                <Text
-                  onPress={ ()=> this.props.navigation.navigate('drawerStack') }
-                  style={styles.buttonText}
-                >Submit</Text>
-              </View>
+              <TouchableOpacity
+                 style={styles.button}
+                 onPress={ ()=> this.props.navigation.navigate('drawerStack') }
+                 >
+                 <Text style={styles.buttonText}>Submit</Text>
+                 
+              </TouchableOpacity>
             </TouchableOpacity>
           </View>
         </KeyboardAvoidingView>
