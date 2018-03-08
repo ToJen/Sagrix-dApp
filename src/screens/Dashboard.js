@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { View, Text } from 'react-native'
+import { StyleSheet, Text, View, TouchableOpacity} from 'react-native'
+import {DrawerNavigator} from 'react-navigation';
 
 export default class DashboardScreen extends Component {
 	render() {

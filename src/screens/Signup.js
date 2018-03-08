@@ -44,12 +44,13 @@ export default class SignupScreen extends Component {
             />
 
             <TouchableOpacity activeOpacity={.5}>
-              <View style={styles.button}>
-                <Text
-                  onPress={ ()=> this.props.navigation.navigate('DashboardScreen') }
-                  style={styles.buttonText} 
-                >Submit</Text>
-              </View>
+              <TouchableOpacity
+                 style={styles.button}
+                 onPress={ ()=> this.props.navigation.navigate('drawerStack') }
+                 >
+                 <Text style={styles.buttonText}>Submit</Text>
+                 
+              </TouchableOpacity>
             </TouchableOpacity>
           </View>
         </KeyboardAvoidingView>
@@ -88,7 +89,7 @@ const styles = StyleSheet.create({
     color: "#FFF"
   },
   button: {
-    backgroundColor: "#605E5E",
+    backgroundColor: "#748037",
     paddingVertical: 15,
     marginVertical: 15,
     alignItems: "center",
@@ -102,4 +103,3 @@ const styles = StyleSheet.create({
     fontSize: 18
   }
 });
-
