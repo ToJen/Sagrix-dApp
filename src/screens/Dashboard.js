@@ -14,13 +14,14 @@ export default class DashboardScreen extends Component {
 			marginTop: Platform.OS === 'android' ? STATUS_BAR_HEIGHT : 0,
 			color: 'white'
 		},
-		headerLeft: <View>I<View />
+		headerLeft: <View>I</View>
 	})
+	
 	render() {
 		return(
-      <View>
-        <Text>Dashboard</Text>
-      </View>
+			<View>
+				<Text>Dashboard</Text>
+			</View>
 		)
 	}
 }
