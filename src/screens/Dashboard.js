@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import { StyleSheet, Text, View, TouchableOpacity, Platform} from 'react-native'
 import {DrawerNavigator} from 'react-navigation';
-import {STATUS_BAR_HEIGHT} from '../constants';
+// import {STATUS_BAR_HEIGHT} from '../constants';
+
+const STATUS_BAR_HEIGHT = 10
 
 export default class DashboardScreen extends Component {
 	static navigationOptions = () => ({
