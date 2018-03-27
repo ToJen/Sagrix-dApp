@@ -21,6 +21,7 @@
     "preset": "jest-expo"
   },
   "dependencies": {
+    "bluebird": "^3.5.1",
     "buffer": "^5.1.0",
     "expo": "^25.0.0",
     "navigation": "^5.0.0",
@@ -33,6 +34,7 @@
     "react-redux": "^5.0.7",
     "redux": "^3.7.2",
     "redux-logger": "^3.0.6",
+    "truffle-hdwallet-provider": "0.0.3",
     "web3": "^1.0.0-beta.33"
   }
 }

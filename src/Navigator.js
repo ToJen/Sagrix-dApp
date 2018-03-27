@@ -1,6 +1,3 @@
-// import './global';
-// import Web3 from 'web3';
-
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { StyleSheet, Text, View } from 'react-native';
@@ -14,6 +11,8 @@ import DashboardScreen from './screens/Dashboard';
 import ForgotPasswordScreen from './screens/ForgotPassword';
 import MyAHDScreen from './screens/MyAHD';
 import CircleOfCareScreen from './screens/CircleOfCare';
+
+import getWeb3 from './utils/getWeb3';
 
 
 const DrawerStack = DrawerNavigator({

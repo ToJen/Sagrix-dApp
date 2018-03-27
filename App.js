@@ -81,7 +81,7 @@
 
 // export default PrimaryNav
 
-
+import './global';
 import React, { Component } from 'react';
 import { createStore, combineReducers, applyMiddleware } from 'redux'
 import { Provider } from 'react-redux'
