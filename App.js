@@ -1,4 +1,6 @@
 import React from 'react';
+import {Provider} from 'react-redux';
+import createStore from './store';
 import { StyleSheet, Text, View } from 'react-native';
 import {StackNavigator, DrawerNavigator, DrawerItems} from 'react-navigation';
 import Icon from 'react-native-vector-icons/FontAwesome';
@@ -9,7 +11,7 @@ import ForgotPasswordScreen from './src/screens/ForgotPassword';
 import MyAHDScreen from './src/screens/MyAHD';
 import CircleOfCareScreen from './src/screens/CircleOfCare';
 
-
+const store = createStore()
 const DrawerStack = DrawerNavigator({
   Dashboard: {
     screen : DashboardScreen,
@@ -77,4 +79,12 @@ const PrimaryNav = StackNavigator({
   initialRouteName: 'loginStack'
 })
 
-export default PrimaryNav
+export default class App extends Component{
+  render(){
+    return(
+      <Provider store={store}>
+        <PrimaryNav />
+      </Provider>
+    )
+  }
+}
