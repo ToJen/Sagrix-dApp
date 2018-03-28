@@ -3,10 +3,11 @@ import { View, TextInput, Image, Text, Button,
         StyleSheet, TouchableOpacity, Animated, Keyboard, KeyboardAvoidingView } from 'react-native';
 import { LinearGradient } from 'expo';
 import logo from '../images/logo.png';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 
-const lockIcon = require("../images/lock.png");
-const personIcon = require("../images/person.png");
+const lockIcon = <Icon name="lock" size={20} color="#000" />//require("../images/lock.png");
+const personIcon = <Icon name="user" size={20} color="#000" />//require("../images/person.png");
 
 const IMAGE_HEIGHT_LARGE = 200
 const IMAGE_HEIGHT_SMALL = 100
@@ -16,11 +17,7 @@ class IconTextInput extends Component {
     return(
       <View style={styles.inputWrap}>
         <View style={styles.iconWrap}>
-          <Image
-            source={this.props.icon}
-            style={styles.icon}
-            resizeMode="contain"
-          />
+          {this.props.icon}
         </View>
         <TextInput
           placeholder={this.props.placeholder}
@@ -157,14 +154,13 @@ const styles = StyleSheet.create({
     paddingHorizontal: 17,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#748037",
+    backgroundColor: "#e7ff6e",
     borderRadius:10,
     marginRight: 5
   },
   icon: {
     width: 20,
     height: 20,
-    // color: "#fff"
   },
   button: {
     backgroundColor: "#e7ff6e",
