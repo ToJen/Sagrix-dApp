@@ -45,6 +45,13 @@ const DrawerStack = DrawerNavigator({
       drawerIcon: () => (<Icon name="unlock-alt" size={20} color="#043233" />)
     }
   },
+  Logout: {
+    screen : LoginScreen,
+    navigationOptions: {
+      header: null,
+      drawerIcon: () => (<Icon name="sign-out" size={20} color="#043233" />)
+    }
+  },
 
 })
 
