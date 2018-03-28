@@ -70,7 +70,27 @@ export default class CircleOfCareScreen extends Component {
           dataSource={this.state.dataSource}
           renderRow={(data) => <Row {...data} />}
           renderSeparator={(sectionId, rowId) => <View key={rowId} style={styles.separator} />}
-          renderHeader={() => <Header />}
+          renderHeader={() => <Header text="Your Circle" canAdd />/*<Text style={styles.sectionHeader}>Your Circle</Text>*/}
+          renderFooter={() => <Footer />}
+          renderSectionHeader={(sectionData) => <SectionHeader {...sectionData} />}
+        />
+
+        <ListView
+          style={styles.container}
+          dataSource={this.state.dataSource}
+          renderRow={(data) => <Row {...data} />}
+          renderSeparator={(sectionId, rowId) => <View key={rowId} style={styles.separator} />}
+          renderHeader={() => <Header text="Member Circles" />}
+          renderFooter={() => <Footer />}
+          renderSectionHeader={(sectionData) => <SectionHeader {...sectionData} />}
+        />
+
+        <ListView
+          style={styles.container}
+          dataSource={this.state.dataSource}
+          renderRow={(data) => <Row {...data} />}
+          renderSeparator={(sectionId, rowId) => <View key={rowId} style={styles.separator} />}
+          renderHeader={() => <Header text="Forbidden" canAdd />}
           renderFooter={() => <Footer />}
           renderSectionHeader={(sectionData) => <SectionHeader {...sectionData} />}
         />
@@ -82,11 +102,16 @@ export default class CircleOfCareScreen extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: 20,
   },
   separator: {
     flex: 1,
     height: StyleSheet.hairlineWidth,
     backgroundColor: '#e7ff6e',
   },
+  sectionHeader: {
+    paddingLeft: 20,
+    fontWeight: "bold",
+    fontSize: 20,
+    backgroundColor: "rgba(0,0,0,0.2)"
+  }
 });

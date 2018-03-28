@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet, TextInput } from 'react-native';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 const styles = StyleSheet.create({
   container: {
@@ -9,23 +10,18 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#C1C1C1',
   },
-  input: {
-    height: 30,
-    flex: 1,
-    paddingHorizontal: 8,
-    fontSize: 15,
-    backgroundColor: '#FFFFFF',
-    borderRadius: 2,
-  },
+  text: {
+    fontSize: 20,
+    fontWeight: "bold"
+  }
 });
 
 const Header = (props) => (
   <View style={styles.container}>
-    <TextInput
-      style={styles.input}
-      placeholder="Search..."
-      onChangeText={(text) => console.log('searching for ', text)}
-    />
+    <Text style={styles.text}>{props.text}</Text>
+    { props.canAdd && 
+      <Icon style={{paddingLeft: 220}} name="ios-add-circle-outline" size={30} />
+    }
   </View>
 );
 

@@ -22,8 +22,8 @@ const styles = StyleSheet.create({
 
 const Footer = (props) => (
   <View style={styles.container}>
-    <TouchableOpacity style={styles.button} onPress={() => console.log('load more')}>
-      <Text style={styles.text}>Load More</Text>
+    <TouchableOpacity style={styles.button} onPress={() => console.log('add more')}>
+      <Text style={styles.text}>Add More</Text>
     </TouchableOpacity>
   </View>
 );
