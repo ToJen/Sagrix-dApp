@@ -11,6 +11,7 @@ import DashboardScreen from './screens/Dashboard';
 import ForgotPasswordScreen from './screens/ForgotPassword';
 import MyAHDScreen from './screens/MyAHD';
 import CircleOfCareScreen from './screens/CircleOfCare';
+import DataAccessScreen from './screens/DataAccess';
 
 import getWeb3 from './utils/getWeb3';
 
@@ -35,6 +36,13 @@ const DrawerStack = DrawerNavigator({
     navigationOptions: {
       title: 'Circle of Care',
       drawerIcon: () => (<Icon name="group" size={20} color="#043233" />)
+    }
+  },
+  DataAccess: {
+    screen : DataAccessScreen,
+    navigationOptions: {
+      title: 'Data Access',
+      drawerIcon: () => (<Icon name="unlock-alt" size={20} color="#043233" />)
     }
   },
 
