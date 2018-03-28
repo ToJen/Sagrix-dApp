@@ -19,18 +19,21 @@ const DrawerStack = DrawerNavigator({
   Dashboard: {
     screen : DashboardScreen,
     navigationOptions: {
+      title: 'Dashboard',
       drawerIcon: () => (<Icon name="home" size={20} color="#043233" />)
     }
   },
   MyAHD: {
     screen : MyAHDScreen,
     navigationOptions: {
+      title: 'MyAHD',
       drawerIcon: () => (<Icon name="file-text-o" size={20} color="#043233" />)
     }
   },
   CircleOfCare: {
     screen : CircleOfCareScreen,
     navigationOptions: {
+      title: 'Circle of Care',
       drawerIcon: () => (<Icon name="group" size={20} color="#043233" />)
     }
   },
@@ -44,10 +47,9 @@ const DrawerNavigation = StackNavigator(
   {
     headerMode: 'float',
     navigationOptions: ({navigation}) => ({
-      headerStyle: {backgroundColor: '#043233'},
-      title: 'Dashboard!',
+      headerStyle: {backgroundColor: '#e7ff6e'},
       headerLeft: <Icon name="navicon" size={30}
-                        color="#e7ff6e" style={{padding: 5}}
+                        color="#043233" style={{padding: 5}}
                         onPress={() => {
                                   if (navigation.state.index === 0) {
                                     navigation.navigate('DrawerOpen')
