@@ -6,8 +6,8 @@ import logo from '../images/logo.png';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 
-const lockIcon = <Icon name="lock" size={20} color="#000" />//require("../images/lock.png");
-const personIcon = <Icon name="user" size={20} color="#000" />//require("../images/person.png");
+const lockIcon = <Icon name="lock" size={20} color="#000" />
+const personIcon = <Icon name="user" size={20} color="#000" />
 
 const IMAGE_HEIGHT_LARGE = 200
 const IMAGE_HEIGHT_SMALL = 100
@@ -147,7 +147,7 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingHorizontal: 20,
     backgroundColor: '#FFF',
-    borderRadius:10,
+    borderRadius: 10,
     color: "#000"
   },
   iconWrap: {
@@ -170,7 +170,7 @@ const styles = StyleSheet.create({
     width: 150,
     marginLeft: 120,
     justifyContent: "center",
-    borderRadius:10
+    borderRadius: 10
   },
   buttonText: {
     color: "#000",
