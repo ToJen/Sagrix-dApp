@@ -4,7 +4,7 @@ import {DrawerNavigator} from 'react-navigation';
 import getWeb3 from '../utils/getWeb3'
 
 export default class DashboardScreen extends Component {
-	constructor(props) {
+	/*constructor(props) {
 		super(props)
 		// this.web3 = this.setWeb3()
 		this.web3 = getWeb3()
@@ -16,7 +16,7 @@ export default class DashboardScreen extends Component {
 
 	async setWeb3() {
 		return await getWeb3() 
-	}
+	}*/
 
 	render() {
 		return(
