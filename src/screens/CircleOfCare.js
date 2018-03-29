@@ -1,11 +1,5 @@
 import React, { Component } from 'react';
-import {
-  AppRegistry,
-  StyleSheet,
-  ListView,
-  Text,
-  View
-} from 'react-native';
+import { StyleSheet, ListView, Text, View } from 'react-native';
 
 import Row from '../components/Row';
 import Header from '../components/Header';
