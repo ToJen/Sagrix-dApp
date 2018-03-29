@@ -11,16 +11,16 @@ export default class MyAHDScreen extends Component {
 	render() {
 		const ahdQuestions = [
                         {label: 'Medical treatment for the primary purposes of research', value: 'one'},
-                        {label: 'Sterilization that is not medically necessary for the \nprotection of my health', value: 'two'},
-                        {label: 'The removal of tissue from my body while I am living for \ntransplantation to another person', value: 'three'},
-                        {label: 'The removal of tissue from my body while I am living for \nthe purpose of medical education or medical research ', value: 'four'}
+                        {label: 'Sterilization that is not medically necessary for the protection of my health', value: 'two'},
+                        {label: 'The removal of tissue from my body while I am living for transplantation to another person', value: 'three'},
+                        {label: 'The removal of tissue from my body while I am living for the purpose of medical education or medical research ', value: 'four'}
                       ];
 
 		return(
 			<View style={styles.container}>
 				<ScrollView>
-					<Text style={styles.bannerText}>You have authorised <Text style={styles.span}>4 people</Text> to make decisions on your behalf</Text>
-					<Text style={{textAlign:'justify'}}>{'\n'}I consent to:{'\n'}</Text>
+					<Text style={styles.info}>You have authorised <Text style={styles.span}>6 people</Text> to make decisions on your behalf</Text>
+					<Text style={styles.consent}>{'\n'}I consent to:{'\n'}</Text>
 					<CheckBox
 						dataSource={ahdQuestions}
 						style={styles.questionStyle}
@@ -35,12 +35,14 @@ export default class MyAHDScreen extends Component {
 						accessibilityLabel="Submit your updated AHD"
 						onPress={() => this.props.navigation.navigate('MyAHDScreen')}
 					 />
-					<Text>{'\n'}All physicians in your Circle of Care will be notified of any changes made.</Text>
+					<Text style={styles.info}>{'\n'}All physicians in your Circle of Care will be notified of any changes made.</Text>
 				</ScrollView>
       </View>
 		)
 	}
 }
+
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -48,10 +50,18 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center'
   },
-  bannerText: {
+  info: {
     flexWrap: 'wrap',
     alignItems: 'center',
-    textAlign: 'justify'
+    textAlign: 'justify',
+    margin: 5
+  },
+  consent: {
+    flexWrap: 'wrap',
+    alignItems: 'center',
+    textAlign: 'justify',
+    margin: 5,
+    fontWeight: "bold"
   },
   span: {
     color: '#748037'
@@ -61,9 +71,9 @@ const styles = StyleSheet.create({
     padding: 20
   },
   questionStyle: {
-
-    flex: 0,
-    flexWrap: 'wrap'
+    flex: 1,
+    flexWrap: 'wrap',
+    padding: 5
 		//width: 350,
   },
   checkboxStyle: {
