@@ -68,13 +68,13 @@ export default class LoginScreen extends Component {
         {/* <View style={{ backgroundColor: '#043233', flex: 1 }} /> */}
         <LinearGradient colors={['rgba(4,50,51,0.9)', 'transparent']} style={styles.linearGradient}>
           <Animated.Image source={logo} style={[styles.logo, {height: this.imageHeight}]} />
-          <Text style={styles.motto}>Healthcare Planning the Smart Way</Text>
+          {/* <Text style={styles.motto}>Takecharge Healthcare Data</Text> */}
           <IconTextInput
-            icon={lockIcon}
+            icon={personIcon}
             placeholder="Username"
           />
           <IconTextInput
-            icon={personIcon}
+            icon={lockIcon}
             placeholder="Password"
           />
           <TouchableOpacity activeOpacity={.5}>

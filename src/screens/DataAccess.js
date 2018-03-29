@@ -93,7 +93,8 @@ const styles = StyleSheet.create({
 	},
 	details: {
 		fontSize: 15,
-		textAlign: "right"
+		textAlign: "right",
+		margin: 5
 	},
 	info: {
 		fontStyle: "italic",
