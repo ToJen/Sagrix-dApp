@@ -7,7 +7,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 
 import LoginScreen from './screens/Login';
 import SignupScreen from './screens/Signup';
-import DashboardScreen from './screens/Dashboard';
+// import DashboardScreen from './screens/Dashboard';
 import ForgotPasswordScreen from './screens/ForgotPassword';
 import MyAHDScreen from './screens/MyAHD';
 import CircleOfCareScreen from './screens/CircleOfCare';
@@ -17,13 +17,13 @@ import getWeb3 from './utils/getWeb3';
 
 
 const DrawerStack = DrawerNavigator({
-  Dashboard: {
-    screen : DashboardScreen,
-    navigationOptions: {
-      title: 'Dashboard',
-      drawerIcon: () => (<Icon name="home" size={20} color="#043233" />)
-    }
-  },
+  // Dashboard: {
+  //   screen : DashboardScreen,
+  //   navigationOptions: {
+  //     title: 'Dashboard',
+  //     drawerIcon: () => (<Icon name="home" size={20} color="#043233" />)
+  //   }
+  // },
   MyAHD: {
     screen : MyAHDScreen,
     navigationOptions: {
@@ -84,10 +84,6 @@ const LoginStack = StackNavigator({
   ForgotPasswordScreen: { screen: ForgotPasswordScreen, navigationOptions: { title: 'Forgot Password' } }
 }, {
   headerMode: 'none',
-/*  navigationOptions: {
-    headerStyle: {backgroundColor: 'red'},
-    title: 'You are not logged in'
-  } */
 });
 
 const middleware = createReactNavigationReduxMiddleware("root", state => state.navigation);
